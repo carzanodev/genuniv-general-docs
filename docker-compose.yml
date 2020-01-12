@@ -1,0 +1,45 @@
+version: "3.7"
+services:
+  postgres-db:
+    build: ./postgres-db
+    container_name: postgres-db
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=password'
+    ports:
+      - "5432"
+  redis-kvs:
+    build: ./redis-kvs
+    container_name: redis-kvs
+    ports:
+      - "6379"
+  discovery-server:
+    build: ../genuniv-discovery-server
+    container_name: discovery-server
+    ports:
+      - "8761:8761"
+  api-gateway:
+    build: ../genuniv-api-gateway
+    container_name: api-gateway
+    ports:
+      - "18000:18000"
+  general-info-service:
+    build: ../genuniv-general-info-service
+    container_name: general-info-service
+    ports:
+      - "19100"
+  college-service:
+    build: ../genuniv-college-service
+    container_name: college-service
+    ports:
+      - "19101"
+  personal-records-service:
+    build: ../genuniv-personal-records-service
+    container_name: personal-records-service
+    ports:
+      - "19102"
+  enrolment-service:
+    build: ../genuniv-enrolment-service
+    container_name: enrolment-service
+    ports:
+      - "19103"
