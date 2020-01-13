@@ -234,7 +234,25 @@ To stop/start/restart a container, execute ↓
 docker {stop|start|restart} container-name
 ```
 
-To stop/start/restart all containers, execute ↓
+To stop/start/restart all containers of genuniv, execute ↓
 ```shell script
 docker-compose -p genuniv {stop|start|restart}
+```
+
+## Bash to Containers
+To bash inside the containers (especially services), execute ↓
+```shell script
+docker exec -it container-name /bin/bash
+```
+
+### Postgres
+To go to Postgres CLI to check the databases, execute ↓
+```shell script
+docker exec -it postgres-db  psql -h localhost -U postgres
+```
+
+### Redis
+To go to Redis CLI to check the KVS, execute ↓
+```shell script
+docker exec -it redis-kvs redis-cli
 ```
