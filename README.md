@@ -1,6 +1,8 @@
 # Generic University
 The Generic University is a university system comprising of services built around the Microservices architectural pattern. It's designed to capture the necessary functionalities that occur around the university as an enterprise, such as the enrolment and student registration.
 
+Currently, the system comprises only of some of the functionalities of a univesity. If time permits, other functionalities will be integrated.
+
 # Purpose
 The project aims to show examples of usage of various technologies, especially those of the Java and Spring Boot stack. Since the projects are built around the Microservices architecture, introducing and integrating new technologies is even more possible and encouraged for learning purposes. 
 
